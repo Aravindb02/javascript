@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColourLovers API Data</title>
+    <style>
+        .color-box {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+        .colors-container{
+            height :auto;
+            width :100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Latest Colors from ColourLovers</h1>
+    <div id="colors-container"></div>
+
+    <script>
+        async function fetchColors() {
+                const response = await fetch('https://www.colourlovers.com/api/colors/new?format=json');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const colors = await response.json();
+                const container = document.getElementById('colors-container');
+
+                colors.forEach(color => {
+                    const colorBox = document.createElement('div');
+                    colorBox.className = 'color-box';
+                    colorBox.style.backgroundColor = `#${color.hex}`;
+                    colorBox.innerText = color.title;
+                    container.appendChild(colorBox);
+                });
+            }
+        fetchColors();
+    </script>
+</body>
+</html>
