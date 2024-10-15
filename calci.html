@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        #result {
+            height: 100px;
+            width: 200px;
+            padding: 2px;
+            border: solid black 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="div1">
+            <label for="num1">First</label>
+            <input type="number" name="second number" id="num1" placeholder="first number">
+        </div>
+        <br>
+        <div class="div2">
+
+            <label for="num2">second</label>
+            <input type="number" name="second number" id="num2" placeholder="second number">
+        </div>
+        <br>
+        <span class="add">
+            <input type="button" value="+" id="add" onclick=addition()>
+        </span>
+        <span class="sub">
+            <input type="button" value="-" id="sub" onclick=subtraction()>
+        </span>
+        <span class="div">
+            <input type="button" value="/" id="div" onclick=division()>
+        </span>
+        <span class="mul">
+            <input type="button" value="*" id="mul" onclick=multiplication()>
+        </span>
+        <span class="mod">
+            <input type="button" value="%" id="mod" onclick=modulus()>
+        </span>
+        <br><br>
+    </form>
+    
+    <div id="result">
+    </div>
+    <script src="./calc.js"></script>
+</body>
+
+</html>
