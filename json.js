@@ -33,7 +33,8 @@ function submitForm(event) {
             displayImage.src = e.target.result;
             displayImage.style.display = 'block';
         };
-        reader.readAsDataURL(file);}
+        reader.readAsDataURL(file);
+    }
 
     alert(names + " " + emails + " " + password + " " + scale + " " + horn + " " + colorhead + " " + colorbody + " " + gender + " " + date + "" + time);
     
