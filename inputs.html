@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs in javascript</title>
+</head>
+
+<body>
+    <!-- <p id="ullas"></p> -->
+    <form>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="name" autofocus>
+
+        <label for="email">email</label>
+        <input type="email" name="email" id="email" placeholder="email">
+
+        <label for="password">password</label>
+        <input type="password" name="pass" id="password" placeholder="password">
+
+        <hr>
+
+        <legend>Checkbox:</legend>
+
+        <div>
+            <input type="checkbox" id="scales" name="scales" />
+            <label for="scales">Scales</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="horns" name="horns" />
+            <label for="horns">Horns</label>
+        </div>
+        <hr>
+
+
+        <p>colors:</p>
+
+        <div>
+            <input type="color" id="head" name="head" value="#e66465" />
+            <label for="head">Head</label>
+        </div>
+
+        <div>
+            <input type="color" id="body" name="body" value="#f6b73c" />
+            <label for="body">Body</label>
+        </div>
+
+
+        <hr>
+        <p>Radio button Select the gender</p>
+        <label for="gender">Gender:- </label>
+        <input type="radio" name="gender" id="male" value="male" /> male
+        <input type="radio" name="gender" id="female" value="female" /> female
+        <hr>
+
+        <label for="start">Start date:</label>
+
+        <input type="date" id="start" name="trip-start" min="2018-01-01" max="2018-12-31" />
+        <hr>
+        <label for="meeting-time">Choose a time:</label>
+
+        <input type="datetime-local" id="time" name="meeting" min="2018-06-07T00:00" max="2018-06-14T00:00" />
+        <hr>
+
+        <label for="avatar">Choose a profile picture:</label>
+
+        <input type="file" id="imageInput" required>
+        
+
+        <br><br>
+        <input type="submit" name="submit" id="submit" onclick="submitForm(event)">
+
+    </form>
+    <h3>Uploaded Image:</h3>
+    <img id="displayImage" src="" alt="Your Image" style="display:none; width: 100px; height: 100px;">
+    <script src="./json.js"></script>
+</body>
+
+</html>

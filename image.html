@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload and Display</title>
+</head>
+<body>
+    <h2>Upload an Image</h2>
+    <form id="imageForm">
+        <input type="file" id="imageInput" accept="image/*" required>
+        <input type="submit" value="Submit">
+    </form>
+    <h3>Uploaded Image:</h3>
+    <img id="displayImage" src="" alt="Your Image" style="display:none; max-width: 100%; height: auto;">
+
+    <script>
+        document.getElementById('imageForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+
+            const fileInput = document.getElementById('imageInput');
+            const file = fileInput.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const displayImage = document.getElementById('displayImage');
+                    displayImage.src = e.target.result;
+                    displayImage.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
