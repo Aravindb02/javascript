@@ -11,7 +11,7 @@ function nameFunction(event) {
         firstNameInput.style.borderColor = 'red';
         alert('First name must be atleast 6 characters long');
     }
-    if (lastName.length < 3 || lastName.length > 12) {
+    else if (lastName.length < 3 || lastName.length > 12) {
         lastNameInput.style.borderColor = 'yellow';
         alert('Last name must be between 6 and 12 characters long');
     }
